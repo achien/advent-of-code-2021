@@ -2,6 +2,7 @@ import fileinput
 
 bits = []
 for line in fileinput.input():
+    line = line.strip()
     bits.append(line)
 
 # gammas = ''
@@ -29,7 +30,7 @@ for line in fileinput.input():
 print()
 print()
 print()
-width = len(bits[0].strip())
+width = len(bits[0])
 o2nums = list(bits)
 for i in range(width):
     ones = 0
@@ -68,12 +69,12 @@ for i in range(width):
         break
 
 o2 = 0
-for b in o2num.strip():
+for b in o2num:
     o2 *= 2
     o2 += int(b)
 
 co2 = 0
-for b in co2num.strip():
+for b in co2num:
     co2 *= 2
     co2 += int(b)
 
